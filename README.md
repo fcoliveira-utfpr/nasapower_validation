@@ -8,6 +8,9 @@ GIOVANELLA, T. H.; OLIVEIRA, F. C.; SOBUCKI, L.; SERVÍN NIZ, A. I. How accurate
 Global atmospheric models that provide gridded data present themselves as a reliable option for filling gaps in meteorological station data and for climate monitoring in various areas of the world. Additionally, they provide the necessary data for reference evapotranspiration estimates. However, it is essential to assess the performance of these models for local and regional applications. In this regard, this research aimed to evaluate the accuracy of NASA/POWER reanalysis data and its performance for reference evapotranspiration estimates in humid climate regions in Brazil. Ten years of meteorological data from surface stations were compared with NASA/POWER data. Aditionally, three methods for estimating reference evapotranspiration were analyzed, consistently comparing station data with reanalysis data. The comparison between the data series was conducted considering the following statistical indices: Pearson correlation coefficient, Wilmott's concordance, Mean Absolute Error, and Root Mean Square Error. It was observed that NASA/POWER meteorological variables such as maximum temperature, minimum temperature, global solar radiation, and top-of-atmosphere radiation provided more accurate estimates than relative humidity and wind speed, which exhibited larger estimation errors. The Penman-Monteith method demonstrated the lowest estimation errors for determining reference evapotranspiration using NASA/POWER data. Determining reference evapotranspiration using NASA/POWER data with a constant wind speed of 2.0 m/s resulted in higher accuracy in evapotranspiration estimates. 
 
 # Repository Contents
+
+`validation_eto.ipynb`: This file was developed in Google Colab using Python. Through it, all files in this repository are imported, and the analyses and graph construction are performed.
+
 `dados_ET.csv`: contains daily evapotranspiration data, calculated for the following municipalities: 'Sete Quedas', 'Planalto', 'Nova Tebas', 'Maringá', 'Marechal Cândido Rondon', 'Foz do Iguaçu', and 'Cidade Gaúcha'. It was determined for surface station data (ETo sur), NASA/POWER data (ETo NP), and NASA/POWER data with constant wind speed at 2 m/s (ETo U2.0).
 
 `dados_ET.csv`: This file contains all the raw data used in the article.:
@@ -73,4 +76,19 @@ Global atmospheric models that provide gridded data present themselves as a reli
 | **dp-TMax** | Standard Deviation of Maximum Temperature | °C |
 | **dp-Tmin** | Standard Deviation of Minimum Temperature | °C |
 | **dp-Qo** | Standard Deviation of Extraterrestrial Radiation | MJ/day |
+
+`eto_values.csv`: This file contains the daily reference evapotranspiration (ETo) values calculated using four different methods for the municipalities studied. The data allows for a direct comparison of ETo estimation methods and data sources. ETo Calculation Methods:
+
+| Variable Header | Method Name | Description | Primary Data Source |
+| :--- | :--- | :--- | :--- |
+| **ETo - PM (mm/d)** | Penman-Monteith (Surface) | Reference ETo calculated using the standard FAO-56 Penman-Monteith equation. | INMET Surface Stations |
+| **ETo - PM (mm/d) - NP** | Penman-Monteith (NASA/POWER) | ETo calculated using the FAO-56 Penman-Monteith equation with meteorological inputs from the NASA/POWER platform. | NASA/POWER |
+| **ETo - JH (mm/d)** | Jensen-Haise | Empirical ETo estimate based on solar radiation and air temperature. | Derived from study data (typically surface inputs) |
+| **ETo - PT (mm/d)** | Priestley-Taylor | Simplified ETo estimate based on net radiation and temperature, assuming a constant aerodynamic component. | Derived from study data (typically surface inputs) |
+
+`metricas_eto_vs_u2.csv`: This file contains the metric values for each municipality and the results from applying the ETo calculation with different wind speed values.
+
+`metricas_season.csv`: : This file contains the metric values for each municipality and the results from applying the ETo calculation with different season.
+
+
 
