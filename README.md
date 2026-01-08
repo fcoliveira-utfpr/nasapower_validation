@@ -9,7 +9,8 @@ Global atmospheric models that provide gridded data present themselves as a reli
 
 # Repository Contents
 `dados_ET.csv`: contains daily evapotranspiration data, calculated for the following municipalities: 'Sete Quedas', 'Planalto', 'Nova Tebas', 'Maringá', 'Marechal Cândido Rondon', 'Foz do Iguaçu', and 'Cidade Gaúcha'. It was determined for surface station data (ETo sur), NASA/POWER data (ETo NP), and NASA/POWER data with constant wind speed at 2 m/s (ETo U2.0).
-`dados_ET.csv`: 
+
+`dados_ET.csv`: This file contains all the raw data used in the article.:
 | Variable (CSV Header) | Description | Unit |
 | :--- | :--- | :--- |
 | **YEAR** | Year | - |
@@ -27,7 +28,7 @@ Global atmospheric models that provide gridded data present themselves as a reli
 | **ea** | Actual Vapor Pressure | kPa |
 | **Declinação solar** | Solar Declination | rad |
 | **N -fotoperíodo (horas)** | Photoperiod (Daylight Hours) | hours |
-| **NDA** | Number of Days in the Year | - |
+| **NDA** | Number of Days in the Year | number |
 | **H ângulo horário (graus)** | Sunset Hour Angle | degrees |
 | **(d/D)²** | Inverse Relative Earth-Sun Distance Squared | - |
 | **Irradiância solar extraterrestre (Qo=RA)  (MJ/m²d)** | Extraterrestrial Solar Radiation | MJ/m²/day |
@@ -52,4 +53,24 @@ Global atmospheric models that provide gridded data present themselves as a reli
 | **ETo_U1_5** | ETo (Constant Wind Speed U2 = 1.5 m/s) | mm/day |
 | **ETo_U2** | ETo (Constant Wind Speed U2 = 2.0 m/s) | mm/day |
 | **ETo_PM_sup** | ETo (Penman-Monteith with Surface Station Data) | mm/day |
+
+`dados_ET.csv`: This file contains the descriptive statistics (mean and standard deviation) for the key climatic variables used as input for the Penman-Monteith ETo calculation in the study. The data is grouped by data source (INMET surface stations vs. NASA/POWER) and municipality.
+
+`elements_and_std.csv`: This file contains the **descriptive statistics** (mean and standard deviation) for the key climatic variables used as input for the Penman-Monteith ETo calculation in the study. The data is grouped by **data source** (INMET surface stations vs. NASA/POWER) and **municipality**. Variables Description:
+| Variable | Description | Unit |
+| :--- | :--- | :--- |
+| **UR (%)** | Mean Relative Humidity | % |
+| **Vel (m/s)** | Mean Wind Speed at 2m | m/s |
+| **Rs (Mj/dia)** | Mean Solar Radiation | MJ/day |
+| **TMax (ºC)** | Mean Maximum Temperature | °C |
+| **Tmin (ºC)** | Mean Minimum Temperature | °C |
+| **Qo (Mj/dia)** | Mean Extraterrestrial Solar Radiation | MJ/day |
+| **Base de dados** | Data Source (INMET or NASA/POWER) | - |
+| **Cidade** | Municipality Name | - |
+| **dp-UR** | Standard Deviation of Relative Humidity | % |
+| **dp-Vel** | Standard Deviation of Wind Speed | m/s |
+| **dp-Rs** | Standard Deviation of Solar Radiation | MJ/day |
+| **dp-TMax** | Standard Deviation of Maximum Temperature | °C |
+| **dp-Tmin** | Standard Deviation of Minimum Temperature | °C |
+| **dp-Qo** | Standard Deviation of Extraterrestrial Radiation | MJ/day |
 
