@@ -1,2 +1,10 @@
-# nasapower_validation
-Em construção...
+# Validation of NASA/POWER data for estimating ETo
+This project presents the codes and dataset used for data analysis in the development of the article titled **"How accurate are the NASA/POWER data for estimating reference evapotranspiration in humid climate regions in Brazil?"**. The analyses were conducted in Google Colab.
+
+# How to cite?
+GIOVANELLA, T. H.; OLIVEIRA, F. C.; SOBUCKI, L.; SERVÍN NIZ, A. I. How accurate are the NASA/POWER data for estimating reference evapotranspiration in humid climate regions in Brazil? Título do Periódico, [local], v. x, n. x, p. xx-xx, ano. DOI: [inserir].
+
+# ABSTRACT
+Global atmospheric models that provide gridded data present themselves as a reliable option for filling gaps in meteorological station data and for climate monitoring in various areas of the world. Additionally, they provide the necessary data for reference evapotranspiration estimates. However, it is essential to assess the performance of these models for local and regional applications. In this regard, this research aimed to evaluate the accuracy of NASA/POWER reanalysis data and its performance for reference evapotranspiration estimates in humid climate regions in Brazil. Ten years of meteorological data from surface stations were compared with NASA/POWER data. Aditionally, three methods for estimating reference evapotranspiration were analyzed, consistently comparing station data with reanalysis data. The comparison between the data series was conducted considering the following statistical indices: Pearson correlation coefficient, Wilmott's concordance, Mean Absolute Error, and Root Mean Square Error. It was observed that NASA/POWER meteorological variables such as maximum temperature, minimum temperature, global solar radiation, and top-of-atmosphere radiation provided more accurate estimates than relative humidity and wind speed, which exhibited larger estimation errors. The Penman-Monteith method demonstrated the lowest estimation errors for determining reference evapotranspiration using NASA/POWER data. Determining reference evapotranspiration using NASA/POWER data with a constant wind speed of 2.0 m/s resulted in higher accuracy in evapotranspiration estimates. 
+
+# Repository Contents
